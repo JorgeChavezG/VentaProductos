@@ -33,11 +33,7 @@ namespace VentaProductos.Controllers
             bool registrado;
             string mensaje;
 
-            if (oUsuario.Clave == oUsuario.ConfirmarClave)
-            {
-                oUsuario.Clave = oUsuario.Clave;
-            }
-            else
+            if (oUsuario.Clave != oUsuario.ConfirmarClave)
             {
                 ViewData["Mensaje"] = "Contraseña no coinciden";
                 return View();
