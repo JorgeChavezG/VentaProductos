@@ -14,7 +14,7 @@ namespace VentaProductos.Controllers
     
     public class AccesoController : Controller
     {
-            static string cadena = "Data Source=LAPTOP-8SARE4LH\\MSSQLSERVER02;Initial Catalog=Venta_Productos;Integrated Security =true";
+            static string cadena = "Server=tcp:dbarturoguerrero.database.windows.net,1433;Initial Catalog=DBGeneral;Persist Security Info=False;User ID=aguerrero;Password=@rtur012345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
 
         // GET: Acceso
         public ActionResult Login()
