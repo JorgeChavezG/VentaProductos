@@ -7,6 +7,7 @@ using VentaProductos.Models;
 using System.Data.SqlClient;
 using System.Data;
 using System.Web.Services.Description;
+using System.Configuration;
 
 namespace VentaProductos.Controllers
 {
@@ -14,7 +15,7 @@ namespace VentaProductos.Controllers
     
     public class AccesoController : Controller
     {
-            static string cadena = "Server=tcp:dbarturoguerrero.database.windows.net,1433;Initial Catalog=DBGeneral;Persist Security Info=False;User ID=aguerrero;Password=@rtur012345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
+        string cadena = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
 
         // GET: Acceso
         public ActionResult Login()
